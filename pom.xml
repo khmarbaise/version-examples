@@ -11,10 +11,11 @@
   </parent>
 
   <groupId>com.soebes.examples</groupId>
-  <artifactId>version-examples</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <artifactId>version-aggregator</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-  <name>Version Examples</name>
+  <name>Version Examples: Aggregator</name>
 
   <scm>
     <developerConnection>scm:git:git@github.com:khmarbaise/version-examples.git</developerConnection>
@@ -22,75 +23,11 @@
     <url>https://github.com/khmarbaise/version-examples</url>
   </scm>
 
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <configuration>
-            <archive>
-              <manifest>
-                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-              </manifest>
-            </archive>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+  <modules>
+    <module>version-example-i</module>
+    <module>version-example-ii</module>
+    <module>version-example-iii</module>
+    <module>version-example-iv</module>
+  </modules>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.easytesting</groupId>
-      <artifactId>fest-assert-core</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.easytesting</groupId>
-      <artifactId>fest-assert</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-  </dependencies>
-
-  <profiles>
-    <profile>
-      <id>run-its</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>1.2.1</version>
-            <executions>
-              <execution>
-                <phase>integration-test</phase>
-                <goals>
-                  <goal>exec</goal>
-                </goals>
-              </execution>
-            </executions>
-            <configuration>
-              <executable>${env.JAVA_HOME}/bin/java</executable>
-              <includeProjectDependencies>true</includeProjectDependencies>
-              <includePluginDependencies>false</includePluginDependencies>
-              <arguments>
-                <argument>-cp</argument>
-                <argument>${project.build.directory}/${project.build.finalName}.${project.packaging}</argument>
-                <argument>com.soebes.examples.TheVersionClass</argument>
-              </arguments>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>

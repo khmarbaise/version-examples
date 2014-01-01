@@ -12,16 +12,11 @@ public class TheVersionClass
         System.out.println( "    Specification Tile:" + this.getClass().getPackage().getSpecificationTitle() );
         System.out.println( "  Specification Vendor:" + this.getClass().getPackage().getSpecificationVendor() );
         System.out.println( " Specification Version:" + this.getClass().getPackage().getSpecificationVersion() );
-
-        // Package[] ListOfPackages = Package.getPackages();
-        // for ( Package SinglePackage : ListOfPackages )
-        // {
-        // System.out.println( "Package: " + SinglePackage.getName() );
-        // }
     }
 
     public static void main( String[] args )
     {
+        @SuppressWarnings( "unused" )
         TheVersionClass tvc = new TheVersionClass();
     }
 }

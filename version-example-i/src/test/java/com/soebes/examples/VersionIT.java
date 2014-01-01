@@ -5,7 +5,9 @@ import org.testng.annotations.Test;
 public class VersionIT
 {
     @Test
-    public void shouldPrintVersion() {
+    public void shouldPrintVersion()
+    {
         TheVersionClass vc = new TheVersionClass();
     }
+
 }

@@ -15,6 +15,7 @@ Status
 TODOs
 -----
 
-Usage
------
+Description
+-----------
 
+Example project based on the blog post.

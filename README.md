@@ -19,3 +19,5 @@ Description
 -----------
 
 Example project based on the blog post.
+
+http://blog.soebes.de/blog/2014/01/02/version-information-into-your-appas-with-maven/

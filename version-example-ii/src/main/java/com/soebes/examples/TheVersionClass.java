@@ -16,7 +16,6 @@ public class TheVersionClass
 
     public static void main( String[] args )
     {
-        @SuppressWarnings( "unused" )
-        TheVersionClass tvc = new TheVersionClass();
+        new TheVersionClass();
     }
 }

@@ -7,7 +7,7 @@ public class VersionIT
     @Test
     public void shouldPrintVersion()
     {
-        TheVersionClass vc = new TheVersionClass();
+        new TheVersionClass();
     }
 
 }
